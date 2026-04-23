@@ -89,14 +89,14 @@ The root `.gitignore` is the single ignore file for the repository. It excludes 
 ## Improvement Opportunities
 
 - [x] ~~Document the "why" behind the stack choices. Add an architecture decision record or short design notes explaining why this project uses Next.js, Cognito, API Gateway, Lambda, DynamoDB, S3, CloudFront, and CDK instead of alternatives.~~
-- [ ] Add code standards for new developers. Cover TypeScript conventions, file organization, Lambda handler patterns, API response shapes, error handling, testing expectations, naming conventions, and when comments are useful.
-- [ ] Create an onboarding guide. Include local setup from a fresh clone, required AWS/Node tooling, environment variables, how to run the frontend and backend checks, and the expected development workflow.
-- [ ] Tighten production security settings. Restrict API CORS origins, review Cognito sign-up behavior, revisit destructive DynamoDB/S3 removal policies, and replace broad development defaults before production use.
-- [ ] Improve API validation. Validate request bodies before writing to DynamoDB and return consistent `400` responses for invalid input.
-- [ ] Add broader test coverage. Include failure-path Lambda tests, CDK assertions for IAM least privilege, and frontend tests for authentication and vendor flows.
-- [ ] Add deployment documentation. Describe how to build the frontend, deploy the CDK stack, capture stack outputs, and configure frontend environment values.
-- [ ] Add portfolio presentation assets. Include screenshots, an architecture diagram, and a short case-study section that explains the problem, solution, tradeoffs, and what was learned.
-- [ ] Add CI checks. Run backend tests, frontend linting, and TypeScript checks automatically on pull requests before merging.
 - [ ] Add environment examples. Keep real `.env` files private, but maintain `.env.example` files so new developers can see required configuration without exposing deployed values.
+- [ ] Create an onboarding guide. Include local setup from a fresh clone, required AWS/Node tooling, environment variables, how to run the frontend and backend checks, and the expected development workflow.
+- [ ] Add code standards for new developers. Cover TypeScript conventions, file organization, Lambda handler patterns, API response shapes, error handling, testing expectations, naming conventions, and when comments are useful.
+- [ ] Improve API validation. Validate request bodies before writing to DynamoDB and return consistent `400` responses for invalid input.
+- [ ] Tighten production security settings. Restrict API CORS origins, review Cognito sign-up behavior, revisit destructive DynamoDB/S3 removal policies, and replace broad development defaults before production use.
+- [ ] Add broader test coverage. Include failure-path Lambda tests, CDK assertions for IAM least privilege, and frontend tests for authentication and vendor flows.
+- [ ] Add CI checks. Run backend tests, frontend linting, and TypeScript checks automatically on pull requests before merging.
+- [ ] Add deployment documentation. Describe how to build the frontend, deploy the CDK stack, capture stack outputs, and configure frontend environment values.
 - [ ] Add observability notes. Document the CloudWatch logs to check for each Lambda and the operational signals that matter when debugging API failures.
 - [ ] Polish the frontend experience. Improve loading, empty, validation, and error states so the app feels complete during a portfolio demo.
+- [ ] Add portfolio presentation assets. Include screenshots, an architecture diagram, and a short case-study section that explains the problem, solution, tradeoffs, and what was learned.
