@@ -15,6 +15,7 @@ Vendor Tracker is a small full-stack application for managing vendor records. It
 | Infrastructure | AWS CDK | Defines and deploys the cloud resources as code |
 
 See [docs/architecture.md](docs/architecture.md) for the architecture diagram.
+See [docs/onboarding.md](docs/onboarding.md) for local setup and first-run steps.
 
 ## Technology Stack
 
@@ -73,6 +74,8 @@ NEXT_PUBLIC_USER_POOL_ID=
 NEXT_PUBLIC_USER_POOL_CLIENT_ID=
 ```
 
+Copy `frontend/.env.example` to `frontend/.env.local` and fill in the deployed values before running the app locally.
+
 Useful commands:
 
 ```bash
@@ -89,8 +92,8 @@ The root `.gitignore` is the single ignore file for the repository. It excludes 
 ## Improvement Opportunities
 
 - [x] ~~Document the "why" behind the stack choices. Add an architecture decision record or short design notes explaining why this project uses Next.js, Cognito, API Gateway, Lambda, DynamoDB, S3, CloudFront, and CDK instead of alternatives.~~
-- [ ] Add environment examples. Keep real `.env` files private, but maintain `.env.example` files so new developers can see required configuration without exposing deployed values.
-- [ ] Create an onboarding guide. Include local setup from a fresh clone, required AWS/Node tooling, environment variables, how to run the frontend and backend checks, and the expected development workflow.
+- [x] ~~Add environment examples. Keep real `.env` files private, but maintain `.env.example` files so new developers can see required configuration without exposing deployed values.~~
+- [x] ~~Create an onboarding guide. Include local setup from a fresh clone, required AWS/Node tooling, environment variables, how to run the frontend and backend checks, and the expected development workflow.~~
 - [ ] Add code standards for new developers. Cover TypeScript conventions, file organization, Lambda handler patterns, API response shapes, error handling, testing expectations, naming conventions, and when comments are useful.
 - [ ] Improve API validation. Validate request bodies before writing to DynamoDB and return consistent `400` responses for invalid input.
 - [ ] Tighten production security settings. Restrict API CORS origins, review Cognito sign-up behavior, revisit destructive DynamoDB/S3 removal policies, and replace broad development defaults before production use.
